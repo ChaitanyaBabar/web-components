@@ -1,0 +1,159 @@
+.process-label {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    color: #10203f;
+}
+
+.process-shape {
+    fill: white;
+    stroke: #0081cb;
+    stroke-width: 2px;
+    stroke-opacity: 1;
+}
+
+.process-shape-unknown {
+    fill: white;
+    stroke: red;
+    stroke-width: 2px;
+    stroke-opacity: 1;
+}
+
+.process-shape-locked {
+    fill: #98d9ff;
+    stroke: #006199;
+    stroke-width: 2px;
+    stroke-opacity: 1;
+}
+
+.process-shape-subProcess {
+    fill: #edf5fa;
+    stroke: #0081CB;
+    stroke-width: 1px;
+    stroke-opacity: 1;
+}
+
+.process-text-subProcess {
+    fill: #0081CB;
+    font-family: SourceSansPro;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.process-connection {
+    stroke-width: 2px;
+    stroke: #0081cb;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.process-connection-locked {
+    stroke-width: 2px;
+    stroke: #006199;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+}
+
+.process-task-icon {
+    fill: #0081cb;
+}
+
+.process-text-annotation {
+    stroke-width: 1px;
+    stroke: #bbb;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+/*
+* Styling for markers.
+*/
+.process-marker-sequenceflow-end {
+    stroke-width: 1px;
+    stroke: #0081cb;
+    fill: #0081cb;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+}
+.process-marker-sequenceflow-end-locked {
+    stroke-width: 1px;
+    stroke: #006199;
+    fill: #006199;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+}
+.process-marker-sequenceflow-default {
+    stroke-width: 1px;
+    stroke: #0081cb;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+}
+.process-marker-flowmarker-circle {
+    stroke-width: 1px;
+    stroke: #0081cb;
+    fill: #0081cb;
+    stroke-linecap: butt;
+    stroke-linejoin: round;
+}
+
+/* Styles for validation overlay annotation */
+.overlay-todo-tooltip {
+    position: relative;
+    display: inline-block;
+    padding-right: 4px;
+}
+
+.process-state-change-icon {
+    transform: matrix(-0.01, -1.05, 1, 0, 32, 25);
+}
+
+.process-event-state-change-icon {
+    transform: matrix(-0.01, -1.05, 1, 0, 20, 38);
+}
+
+.overlay-todo-tooltip .overlay-todo-tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    max-width: 250px;
+    border: 1px solid black;
+    top: 155%;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    z-index: 1;
+    padding-left: 4px;
+    word-wrap: break-word;
+    font-size: 12px;
+    background-color: #FEFEFE;
+    font-family: SourceSansPro;
+    box-shadow: 0 0 2px 1px #FEFEFE;
+}
+
+.overlay-todo-tooltip:hover .overlay-todo-tooltiptext {
+    visibility: visible;
+}
+
+.validation-overlay-icon {
+    width: 20px;
+}
+/* CBPM-11489: thicken the line and change color when shape is dropped on connection */
+.djs-connection.hover.new-parent .process-connection {
+    stroke-width:3px;
+    stroke:#04BE5B;
+}
+
+/*
+CBPM-16944 : Adding the Hand Cursor Pointer on Process Diagram Elements
+*/
+.process-diagram-dragger-icon {
+    cursor: grab;
+}
+
+.dt-hand-pointer {
+    cursor: pointer;
+}

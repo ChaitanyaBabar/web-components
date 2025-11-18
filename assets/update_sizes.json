@@ -1,0 +1,588 @@
+{
+  "$type": "bp:Definitions",
+  "id": "_vZRSgI_MEfCCSrkQV0fGYA",
+  "rootElements": [
+    {
+      "$type": "bp:Process",
+      "id": "_vZ0sII_MEfCCSrkQV0fGYA",
+      "validationStatus": "Ok",
+      "flowElements": [
+        {
+          "$type": "bp:SubProcess",
+          "id": "_1Idp8I_MEfCCSrkQV0fGYA",
+          "name": "Pool",
+          "internalName": "Pool",
+          "subProcessType": "ParallelLaneContainer",
+          "flowElements": [
+            {
+              "$type": "bp:SubProcess",
+              "id": "_1Ie4EI_MEfCCSrkQV0fGYA",
+              "name": "Lane",
+              "internalName": "Lane",
+              "subProcessType": "ParallelLane",
+              "flowElements": [
+                {
+                  "$type": "bp:StartEvent",
+                  "id": "_1Ie4EY_MEfCCSrkQV0fGYA",
+                  "name": "Start Event",
+                  "internalName": "StartEvent",
+                  "outgoing": [
+                    "_6FK0gI_MEfCCSrkQV0fGYA"
+                  ]
+                },
+                {
+                  "$type": "bp:EndEvent",
+                  "id": "_1Ie4Eo_MEfCCSrkQV0fGYA",
+                  "name": "End Event",
+                  "internalName": "EndEvent",
+                  "incoming": [
+                    "_1Ie4E4_MEfCCSrkQV0fGYA",
+                    "_hv_E8LDfEfCKCv84icLsWg"
+                  ]
+                },
+                {
+                  "$type": "bp:UserTask",
+                  "id": "_6FKNcI_MEfCCSrkQV0fGYA",
+                  "name": "User Task",
+                  "internalName": "UserTask",
+                  "incoming": [
+                    "_6FK0gI_MEfCCSrkQV0fGYA"
+                  ],
+                  "outgoing": [
+                    "_Q6ffEY_QEfCCSrkQV0fGYA"
+                  ]
+                },
+                {
+                  "$type": "bp:ScriptTask",
+                  "id": "_7fju4I_MEfCCSrkQV0fGYA",
+                  "name": "Script Task",
+                  "internalName": "ScriptTask",
+                  "incoming": [
+                    "_7fju4Y_MEfCCSrkQV0fGYA"
+                  ],
+                  "outgoing": [
+                    "_kFtxwbDVEfCKCv84icLsWg"
+                  ],
+                  "runtimeScript": {
+                    "$type": "bp:FormalExpression",
+                    "language": "urn:tibco:wsbpel:2.0:sublang:javascript",
+                    "body": "var t1 = \"demo\";"
+                  }
+                },
+                {
+                  "$type": "bp:ExclusiveGateway",
+                  "id": "_Q6ffEI_QEfCCSrkQV0fGYA",
+                  "name": "Decide",
+                  "internalName": "Decide",
+                  "incoming": [
+                    "_Q6ffEY_QEfCCSrkQV0fGYA"
+                  ],
+                  "outgoing": [
+                    "_7fju4Y_MEfCCSrkQV0fGYA",
+                    "_VnnVg4_QEfCCSrkQV0fGYA"
+                  ]
+                },
+                {
+                  "$type": "bp:ScriptTask",
+                  "id": "_VnnVgo_QEfCCSrkQV0fGYA",
+                  "name": "Script Task 2",
+                  "internalName": "ScriptTask2",
+                  "incoming": [
+                    "_VnnVg4_QEfCCSrkQV0fGYA"
+                  ],
+                  "outgoing": [
+                    "_hv_E8LDfEfCKCv84icLsWg"
+                  ],
+                  "runtimeScript": {
+                    "$type": "bp:FormalExpression",
+                    "language": "urn:tibco:wsbpel:2.0:sublang:javascript",
+                    "body": "var s2 = \"script_task\";"
+                  }
+                },
+                {
+                  "$type": "bp:UserTask",
+                  "id": "_kFtxwLDVEfCKCv84icLsWg",
+                  "name": "Condition Matched UserTask",
+                  "internalName": "ConditionMatchedUserTask",
+                  "incoming": [
+                    "_kFtxwbDVEfCKCv84icLsWg"
+                  ],
+                  "outgoing": [
+                    "_d-SU8rDfEfCKCv84icLsWg"
+                  ]
+                },
+                {
+                  "$type": "bp:CallActivity",
+                  "id": "_DxnXQLDgEfCKCv84icLsWg",
+                  "name": "Call Sub-Process",
+                  "internalName": "CallSubProcess",
+                  "incoming": [
+                    "_d-SU8rDfEfCKCv84icLsWg"
+                  ],
+                  "outgoing": [
+                    "_1Ie4E4_MEfCCSrkQV0fGYA"
+                  ],
+                  "processArtifactId": "_Lj8gkLDfEfCKCv84icLsWg",
+                  "applicationId": "BPMBusinessSubProcess"
+                },
+                {
+                  "$type": "bp:SequenceFlow",
+                  "id": "_6FK0gI_MEfCCSrkQV0fGYA",
+                  "flowMarker": "A",
+                  "sourceRef": "_1Ie4EY_MEfCCSrkQV0fGYA",
+                  "targetRef": "_6FKNcI_MEfCCSrkQV0fGYA"
+                },
+                {
+                  "$type": "bp:SequenceFlow",
+                  "id": "_Q6ffEY_QEfCCSrkQV0fGYA",
+                  "flowMarker": "A",
+                  "sourceRef": "_6FKNcI_MEfCCSrkQV0fGYA",
+                  "targetRef": "_Q6ffEI_QEfCCSrkQV0fGYA"
+                },
+                {
+                  "$type": "bp:SequenceFlow",
+                  "id": "_7fju4Y_MEfCCSrkQV0fGYA",
+                  "flowMarker": "A",
+                  "sourceRef": "_Q6ffEI_QEfCCSrkQV0fGYA",
+                  "targetRef": "_7fju4I_MEfCCSrkQV0fGYA",
+                  "conditionExpression": {
+                    "$type": "bp:FormalExpression",
+                    "language": "urn:tibco:wsbpel:2.0:sublang:javascript",
+                    "body": "data.Field == data.Task1_Field1;"
+                  }
+                },
+                {
+                  "$type": "bp:SequenceFlow",
+                  "id": "_VnnVg4_QEfCCSrkQV0fGYA",
+                  "flowMarker": "A",
+                  "sourceRef": "_Q6ffEI_QEfCCSrkQV0fGYA",
+                  "targetRef": "_VnnVgo_QEfCCSrkQV0fGYA",
+                  "conditionExpression": {
+                    "$type": "bp:FormalExpression",
+                    "language": "urn:tibco:wsbpel:2.0:sublang:javascript",
+                    "body": "##otherwise##"
+                  }
+                },
+                {
+                  "$type": "bp:SequenceFlow",
+                  "id": "_kFtxwbDVEfCKCv84icLsWg",
+                  "flowMarker": "A",
+                  "sourceRef": "_7fju4I_MEfCCSrkQV0fGYA",
+                  "targetRef": "_kFtxwLDVEfCKCv84icLsWg"
+                },
+                {
+                  "$type": "bp:SequenceFlow",
+                  "id": "_d-SU8rDfEfCKCv84icLsWg",
+                  "flowMarker": "A",
+                  "sourceRef": "_kFtxwLDVEfCKCv84icLsWg",
+                  "targetRef": "_DxnXQLDgEfCKCv84icLsWg"
+                },
+                {
+                  "$type": "bp:SequenceFlow",
+                  "id": "_1Ie4E4_MEfCCSrkQV0fGYA",
+                  "flowMarker": "A",
+                  "sourceRef": "_DxnXQLDgEfCKCv84icLsWg",
+                  "targetRef": "_1Ie4Eo_MEfCCSrkQV0fGYA"
+                },
+                {
+                  "$type": "bp:SequenceFlow",
+                  "id": "_hv_E8LDfEfCKCv84icLsWg",
+                  "flowMarker": "A",
+                  "sourceRef": "_VnnVgo_QEfCCSrkQV0fGYA",
+                  "targetRef": "_1Ie4Eo_MEfCCSrkQV0fGYA"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "data": [
+        {
+          "$type": "bp:DataField",
+          "id": "_O_Pd4I_REfCCSrkQV0fGYA",
+          "name": "Field",
+          "internalName": "Field",
+          "type": {
+            "$type": "bp:BaseType",
+            "name": "STRING"
+          }
+        },
+        {
+          "$type": "bp:DataField",
+          "id": "_Q8yIoY_REfCCSrkQV0fGYA",
+          "name": "Task1_Field1",
+          "internalName": "Task1_Field1",
+          "type": {
+            "$type": "bp:BaseType",
+            "name": "STRING"
+          }
+        },
+        {
+          "$type": "bp:DataField",
+          "id": "_RC2UYI_REfCCSrkQV0fGYA",
+          "name": "Task1_Field2",
+          "internalName": "Task1_Field2",
+          "type": {
+            "$type": "bp:BaseType",
+            "name": "STRING"
+          }
+        },
+        {
+          "$type": "bp:DataField",
+          "id": "_RPN8cI_REfCCSrkQV0fGYA",
+          "name": "Task1_Field3",
+          "internalName": "Task1_Field3",
+          "type": {
+            "$type": "bp:BaseType",
+            "name": "STRING"
+          }
+        },
+        {
+          "$type": "bp:DataField",
+          "id": "_7BJF0I_SEfCCSrkQV0fGYA",
+          "name": "date12",
+          "internalName": "date12",
+          "type": {
+            "$type": "bp:BaseType",
+            "name": "DATE"
+          }
+        }
+      ]
+    }
+  ],
+  "diagrams": [
+    {
+      "$type": "bpdi:BPDiagram",
+      "plane": {
+        "$type": "bpdi:BPPlane",
+        "planeElement": [
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_1Idp8I_MEfCCSrkQV0fGYA",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 24,
+              "y": 0,
+              "width": 1495,
+              "height": 736
+            }
+          },
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_1Ie4EI_MEfCCSrkQV0fGYA",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 48,
+              "y": 0,
+              "width": 1471,
+              "height": 736
+            }
+          },
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_1Ie4EY_MEfCCSrkQV0fGYA",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 51,
+              "y": 155,
+              "width": 27,
+              "height": 27
+            },
+            "label": {
+              "$type": "bpdi:BPLabel",
+              "bounds": {
+                "$type": "dc:Bounds",
+                "x": 37,
+                "y": 185,
+                "width": 55,
+                "height": 20
+              }
+            }
+          },
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_1Ie4Eo_MEfCCSrkQV0fGYA",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 1336,
+              "y": 187,
+              "width": 27,
+              "height": 26
+            },
+            "label": {
+              "$type": "bpdi:BPLabel",
+              "bounds": {
+                "$type": "dc:Bounds",
+                "x": 1322,
+                "y": 217,
+                "width": 55,
+                "height": 20
+              }
+            }
+          },
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_6FKNcI_MEfCCSrkQV0fGYA",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 170,
+              "y": 134,
+              "width": 140,
+              "height": 120
+            }
+          },
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_7fju4I_MEfCCSrkQV0fGYA",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 404,
+              "y": 17,
+              "width": 140,
+              "height": 120
+            }
+          },
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_Q6ffEI_QEfCCSrkQV0fGYA",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 266,
+              "y": 133,
+              "width": 43,
+              "height": 45
+            },
+            "label": {
+              "$type": "bpdi:BPLabel",
+              "bounds": {
+                "$type": "dc:Bounds",
+                "x": 273,
+                "y": 183,
+                "width": 29,
+                "height": 20
+              }
+            }
+          },
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_VnnVgo_QEfCCSrkQV0fGYA",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 573,
+              "y": 338,
+              "width": 140,
+              "height": 120
+            }
+          },
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_kFtxwLDVEfCKCv84icLsWg",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 530,
+              "y": 24,
+              "width": 140,
+              "height": 120
+            }
+          },
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_DxnXQLDgEfCKCv84icLsWg",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 788,
+              "y": 16,
+              "width": 160,
+              "height": 100
+            }
+          },
+          {
+            "$type": "bpdi:BPEdge",
+            "waypoint": [
+              {
+                "$type": "dc:Point",
+                "x": 78,
+                "y": 168
+              },
+              {
+                "$type": "dc:Point",
+                "x": 122,
+                "y": 168
+              },
+              {
+                "$type": "dc:Point",
+                "x": 122,
+                "y": 166
+              },
+              {
+                "$type": "dc:Point",
+                "x": 170,
+                "y": 166
+              }
+            ],
+            "bpElement": "_6FK0gI_MEfCCSrkQV0fGYA"
+          },
+          {
+            "$type": "bpdi:BPEdge",
+            "waypoint": [
+              {
+                "$type": "dc:Point",
+                "x": 266,
+                "y": 166
+              },
+              {
+                "$type": "dc:Point",
+                "x": 287,
+                "y": 166
+              },
+              {
+                "$type": "dc:Point",
+                "x": 287,
+                "y": 155
+              }
+            ],
+            "bpElement": "_Q6ffEY_QEfCCSrkQV0fGYA"
+          },
+          {
+            "$type": "bpdi:BPEdge",
+            "waypoint": [
+              {
+                "$type": "dc:Point",
+                "x": 287,
+                "y": 133
+              },
+              {
+                "$type": "dc:Point",
+                "x": 287,
+                "y": 49
+              },
+              {
+                "$type": "dc:Point",
+                "x": 404,
+                "y": 49
+              }
+            ],
+            "bpElement": "_7fju4Y_MEfCCSrkQV0fGYA"
+          },
+          {
+            "$type": "bpdi:BPEdge",
+            "waypoint": [
+              {
+                "$type": "dc:Point",
+                "x": 287,
+                "y": 178
+              },
+              {
+                "$type": "dc:Point",
+                "x": 287,
+                "y": 370
+              },
+              {
+                "$type": "dc:Point",
+                "x": 573,
+                "y": 370
+              }
+            ],
+            "bpElement": "_VnnVg4_QEfCCSrkQV0fGYA"
+          },
+          {
+            "$type": "bpdi:BPEdge",
+            "waypoint": [
+              {
+                "$type": "dc:Point",
+                "x": 500,
+                "y": 49
+              },
+              {
+                "$type": "dc:Point",
+                "x": 515,
+                "y": 49
+              },
+              {
+                "$type": "dc:Point",
+                "x": 515,
+                "y": 56
+              },
+              {
+                "$type": "dc:Point",
+                "x": 530,
+                "y": 56
+              }
+            ],
+            "bpElement": "_kFtxwbDVEfCKCv84icLsWg"
+          },
+          {
+            "$type": "bpdi:BPEdge",
+            "waypoint": [
+              {
+                "$type": "dc:Point",
+                "x": 626,
+                "y": 56
+              },
+              {
+                "$type": "dc:Point",
+                "x": 788,
+                "y": 56
+              }
+            ],
+            "bpElement": "_d-SU8rDfEfCKCv84icLsWg"
+          },
+          {
+            "$type": "bpdi:BPEdge",
+            "waypoint": [
+              {
+                "$type": "dc:Point",
+                "x": 916,
+                "y": 56
+              },
+              {
+                "$type": "dc:Point",
+                "x": 1126,
+                "y": 56
+              },
+              {
+                "$type": "dc:Point",
+                "x": 1126,
+                "y": 200
+              },
+              {
+                "$type": "dc:Point",
+                "x": 1336,
+                "y": 200
+              }
+            ],
+            "bpElement": "_1Ie4E4_MEfCCSrkQV0fGYA"
+          },
+          {
+            "$type": "bpdi:BPEdge",
+            "waypoint": [
+              {
+                "$type": "dc:Point",
+                "x": 669,
+                "y": 370
+              },
+              {
+                "$type": "dc:Point",
+                "x": 1002,
+                "y": 370
+              },
+              {
+                "$type": "dc:Point",
+                "x": 1002,
+                "y": 200
+              },
+              {
+                "$type": "dc:Point",
+                "x": 1336,
+                "y": 200
+              }
+            ],
+            "bpElement": "_hv_E8LDfEfCKCv84icLsWg"
+          }
+        ],
+        "bpElement": "_vZ0sII_MEfCCSrkQV0fGYA"
+      }
+    }
+  ],
+  "formatVersion": 3
+}

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-flat-20030114.dtd">
+<?xml-stylesheet type="text/css" href="svgSupport/xpdl2svg.css"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewport="0 0 1545.5 791" xmlns="http://www.w3.org/2000/svg" width="1545.5" height="791" version="1.1" id="PackageProcess__vZRSgI_MEfCCSrkQV0fGYA_vZ0sII_MEfCCSrkQV0fGYA" onload="onLoad()">
+    <desc>BPMProcess</desc>
+    <!--=================================================
+			Scripting...
+			=================================================-->
+    <script type="text/ecmascript" xlink:href="svgSupport/xpdl2svg.js"/>
+    <defs>
+        <!--=================================================
+		Standard Object Styles...
+			Changing these will override the value defined in parameters standardXXXXColor
+			AND those given in the XPDL for given classes of objects...
+		=================================================-->
+        <!--=================================================
+			Standard Reusable Color Gradient...
+			(Used when the standard Activity color (param=StandardActivityFillColor) is defined 
+			for  an activity (to save specifying smae thing over and over).
+			=================================================-->
+        <linearGradient id="__Gradient_StandardActivity__" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop stop-color="rgb(255,219,74)" offset="0%"/>
+            <stop stop-color="white" offset="100%"/>
+        </linearGradient>
+        <!--=================================================-->
+        <!--=================================================
+		Standard Reusable BPMN shapes...
+		=================================================-->
+        <polygon id="Std_Gateway" class="Gateway" points="0,-22.5 21.5,0 0,22.5 -21.5,0"/>
+        <circle id="Std_StartEvent" r="13.5" class="StartEvent"/>
+        <circle id="Std_IntermediateEvent" r="13.5" class="IntermediateEvent"/>
+        <circle id="Std_InnerIntermediateEvent" r="10.5" class="IntermediateEvent"/>
+        <circle id="Std_EndEvent" r="13.5" class="EndEvent"/>
+        <polygon id="Std_RightArrow" class="ConnectionDecorator" points="0,0 -7,3.5 -7,-3.5 "/>
+        <polygon id="Std_LeftArrow" class="ConnectionDecorator" points="0,0 7,-3.5 7,3.5 "/>
+        <polygon id="Std_DownArrow" class="ConnectionDecorator" points="0,0 -3.5,-7 3.5,-7 "/>
+        <polygon id="Std_UpArrow" class="ConnectionDecorator" points="0,0 3.5,7 -3.5,7 "/>
+        <polygon id="Std_RightDiamond" class="ConnectionDecorator" points="0,0 7,-3.5 14,0 7,3.5 "/>
+        <polygon id="Std_LeftDiamond" class="ConnectionDecorator" points="0,0 -7,-3.5 -14,0 -7,3.5 "/>
+        <polygon id="Std_DownDiamond" class="ConnectionDecorator" points="0,0 -3.5,7 0,14 3.5,7 "/>
+        <polygon id="Std_UpDiamond" class="ConnectionDecorator" points="0,0 -3.5,-7 0,-14 3.5,-7 "/>
+        <polygon id="Std_RightSlash" class="ConnectionDecorator" points="3.5,7 11.9,-7 "/>
+        <polygon id="Std_LeftSlash" class="ConnectionDecorator" points="-11.9,7 -3.5,-7 "/>
+        <polygon id="Std_DownSlash" class="ConnectionDecorator" points="-4.2,17.5 4.2,3.5 "/>
+        <polygon id="Std_UpSlash" class="ConnectionDecorator" points="-4.2,-3.5 4.2,-17.5 "/>
+        <image id="Img_CatchMessage" xlink:href="svgSupport/icons/eventCatchMessage.png" width="16" height="16"/>
+        <image id="Img_SendTask" xlink:href="svgSupport/icons/taskSend.png" width="20" height="20"/>
+        <image id="Img_UserTask" xlink:href="svgSupport/icons/taskUser.png" width="20" height="20"/>
+        <image id="Img_ScriptTask" xlink:href="svgSupport/icons/taskScript.png" width="20" height="20"/>
+        <image id="Img_ServiceTask" xlink:href="svgSupport/icons/taskService.png" width="20" height="20"/>
+        <image id="Img_ReceiveTask" xlink:href="svgSupport/icons/taskReceive.png" width="20" height="20"/>
+        <image id="Img_SubProcTask" xlink:href="svgSupport/icons/taskSubProcess.png" width="20" height="20"/>
+    </defs>
+    <!--=================================================
+		Graphical Elements Process: BPMProcessProcess...
+		=================================================-->
+    <g id="_vZ0sII_MEfCCSrkQV0fGYA" transform="translate(5.5, 5.5) scale(1)" class="ProcessObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+        <!--=================================================
+		Graphical Elements Pool: Pool...
+		=================================================-->
+        <g id="_1Idp8I_MEfCCSrkQV0fGYA" class="PoolObject DiagramObject" transform="translate(0, 0)" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+            <defs>
+                <linearGradient id="Gradient__1Idp8I_MEfCCSrkQV0fGYA" x1="0%" y1="50%" x2="100%" y2="50%">
+                    <stop stop-color="rgb(223,179,0)" offset="0%"/>
+                    <stop stop-color="white" offset="100%"/>
+                </linearGradient>
+            </defs>
+            <rect id="Pool__1Idp8I_MEfCCSrkQV0fGYA" x="0" y="0" width="1495.5" height="736" class="Pool" stroke-width="1.5" stroke="rgb(0,0,128)"/>
+            <rect id="MainShape__1Idp8I_MEfCCSrkQV0fGYA" x="0" y="0" width="24" height="736" class="PoolHeader" stroke-width="1.5" fill="url(#Gradient__1Idp8I_MEfCCSrkQV0fGYA)" stroke="rgb(0,0,128)"/>
+            <text x="16" y="368" transform="rotate(-90, 16, 368)" text-anchor="middle" stroke="rgb(0,0,128)">Pool</text>
+            <!--=================================================
+			Graphical Elements Lane: Lane...
+			=================================================-->
+            <g id="_1Ie4EI_MEfCCSrkQV0fGYA" class="LaneObject DiagramObject" transform="translate(24, 0)" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                <rect id="Lane__1Ie4EI_MEfCCSrkQV0fGYA" x="0" y="0" width="1471.5" height="736.0" class="Lane" fill="white" stroke-width="1.5" stroke="rgb(128,128,128)"/>
+                <defs>
+                    <linearGradient id="Gradient__1Ie4EI_MEfCCSrkQV0fGYA" x1="0%" y1="50%" x2="100%" y2="50%">
+                        <stop stop-color="rgb(175,175,200)" offset="0%"/>
+                        <stop stop-color="white" offset="100%"/>
+                    </linearGradient>
+                </defs>
+                <rect id="MainShape__1Ie4EI_MEfCCSrkQV0fGYA" x="0" y="0" width="24" height="736.0" class="LaneHeader" stroke-width="1.5" fill="url(#Gradient__1Ie4EI_MEfCCSrkQV0fGYA)" stroke="rgb(128,128,128)"/>
+                <text x="16" y="368" transform="rotate(-90, 16, 368)" text-anchor="middle" stroke="rgb(0,0,0)">Lane</text>
+                <g id="LaneNodes__1Ie4EI_MEfCCSrkQV0fGYA" transform="translate(24, 0)">
+                    <text id="_DEBUG_" x="5" y="15"/>
+                    <g id="_1Ie4EY_MEfCCSrkQV0fGYA" class="ActivityObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                        <use id="MainShape__1Ie4EY_MEfCCSrkQV0fGYA" xlink:href="#Std_StartEvent" x="27.0" y="155.0" stroke-width="1.5" fill="url(#__Gradient_StandardActivity__)" stroke="rgb(0,0,128)"/>
+                        <text id="Label__1Ie4EY_MEfCCSrkQV0fGYA" x="27.0" y="180.5" text-anchor="middle" stroke="rgb(0,0,128)">Start Event</text>
+                    </g>
+                    <g id="_1Ie4Eo_MEfCCSrkQV0fGYA" class="ActivityObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                        <use id="MainShape__1Ie4Eo_MEfCCSrkQV0fGYA" xlink:href="#Std_EndEvent" x="1312.0" y="187.0" stroke-width="3.0" fill="url(#__Gradient_StandardActivity__)" stroke="rgb(0,0,128)"/>
+                        <text id="Label__1Ie4Eo_MEfCCSrkQV0fGYA" x="1312.0" y="212.5" text-anchor="middle" stroke="rgb(0,0,128)">End Event</text>
+                    </g>
+                    <g id="_6FKNcI_MEfCCSrkQV0fGYA" class="ActivityObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                        <rect id="MainShape__6FKNcI_MEfCCSrkQV0fGYA" x="98" y="134" rx="10" ry="10" width="96.0" height="64.0" class="Task" stroke-width="1.5" fill="url(#__Gradient_StandardActivity__)" stroke="rgb(0,0,128)"/>
+                        <g id="MainShape__6FKNcI_MEfCCSrkQV0fGYA_GrpLabel">
+                            <clipPath id="MainShape__6FKNcI_MEfCCSrkQV0fGYA_GrpLabel_Clip">
+                                <rect x="108" y="134" width="76" height="64.0"/>
+                            </clipPath>
+                            <text id="Label__6FKNcI_MEfCCSrkQV0fGYA" clip-path="url(#MainShape__6FKNcI_MEfCCSrkQV0fGYA_GrpLabel_Clip)" x="146.0" y="186" text-anchor="middle" stroke="rgb(0,0,128)">User Task</text>
+                        </g>
+                        <use id="Icon__6FKNcI_MEfCCSrkQV0fGYA" xlink:href="#Img_UserTask" x="130" y="138"/>
+                    </g>
+                    <g id="_7fju4I_MEfCCSrkQV0fGYA" class="ActivityObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                        <rect id="MainShape__7fju4I_MEfCCSrkQV0fGYA" x="380" y="17" rx="10" ry="10" width="96.0" height="64.0" class="Task" stroke-width="1.5" fill="url(#__Gradient_StandardActivity__)" stroke="rgb(0,0,128)"/>
+                        <g id="MainShape__7fju4I_MEfCCSrkQV0fGYA_GrpLabel">
+                            <clipPath id="MainShape__7fju4I_MEfCCSrkQV0fGYA_GrpLabel_Clip">
+                                <rect x="390" y="17" width="76" height="64.0"/>
+                            </clipPath>
+                            <text id="Label__7fju4I_MEfCCSrkQV0fGYA" clip-path="url(#MainShape__7fju4I_MEfCCSrkQV0fGYA_GrpLabel_Clip)" x="428.0" y="69" text-anchor="middle" stroke="rgb(0,0,128)">Script Task</text>
+                        </g>
+                        <use id="Icon__7fju4I_MEfCCSrkQV0fGYA" xlink:href="#Img_ScriptTask" x="412" y="21"/>
+                    </g>
+                    <g id="_Q6ffEI_QEfCCSrkQV0fGYA" class="ActivityObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                        <use id="MainShape__Q6ffEI_QEfCCSrkQV0fGYA" xlink:href="#Std_Gateway" x="287.0" y="155.0" stroke-width="1.5" fill="url(#__Gradient_StandardActivity__)" stroke="rgb(0,0,128)"/>
+                        <text id="Label__Q6ffEI_QEfCCSrkQV0fGYA" x="287.0" y="189.5" text-anchor="middle" stroke="rgb(0,0,128)">Decide</text>
+                    </g>
+                    <g id="_VnnVgo_QEfCCSrkQV0fGYA" class="ActivityObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                        <rect id="MainShape__VnnVgo_QEfCCSrkQV0fGYA" x="549" y="338" rx="10" ry="10" width="96.0" height="64.0" class="Task" stroke-width="1.5" fill="url(#__Gradient_StandardActivity__)" stroke="rgb(0,0,128)"/>
+                        <g id="MainShape__VnnVgo_QEfCCSrkQV0fGYA_GrpLabel">
+                            <clipPath id="MainShape__VnnVgo_QEfCCSrkQV0fGYA_GrpLabel_Clip">
+                                <rect x="559" y="338" width="76" height="64.0"/>
+                            </clipPath>
+                            <text id="Label__VnnVgo_QEfCCSrkQV0fGYA" clip-path="url(#MainShape__VnnVgo_QEfCCSrkQV0fGYA_GrpLabel_Clip)" x="597.0" y="390" text-anchor="middle" stroke="rgb(0,0,128)">Script Task 2</text>
+                        </g>
+                        <use id="Icon__VnnVgo_QEfCCSrkQV0fGYA" xlink:href="#Img_ScriptTask" x="581" y="342"/>
+                    </g>
+                    <g id="_kFtxwLDVEfCKCv84icLsWg" class="ActivityObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                        <rect id="MainShape__kFtxwLDVEfCKCv84icLsWg" x="506" y="24" rx="10" ry="10" width="96.0" height="64.0" class="Task" stroke-width="1.5" fill="url(#__Gradient_StandardActivity__)" stroke="rgb(0,0,128)"/>
+                        <g id="MainShape__kFtxwLDVEfCKCv84icLsWg_GrpLabel">
+                            <clipPath id="MainShape__kFtxwLDVEfCKCv84icLsWg_GrpLabel_Clip">
+                                <rect x="516" y="24" width="76" height="64.0"/>
+                            </clipPath>
+                            <text id="Label__kFtxwLDVEfCKCv84icLsWg" clip-path="url(#MainShape__kFtxwLDVEfCKCv84icLsWg_GrpLabel_Clip)" x="554.0" y="76" text-anchor="middle" stroke="rgb(0,0,128)">Condition Matched UserTask</text>
+                        </g>
+                        <use id="Icon__kFtxwLDVEfCKCv84icLsWg" xlink:href="#Img_UserTask" x="538" y="28"/>
+                    </g>
+                    <g id="_DxnXQLDgEfCKCv84icLsWg" data-type="EmbeddedSubProcess" class="ActivityObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                        <rect id="MainShape__DxnXQLDgEfCKCv84icLsWg" x="764" y="16" rx="10" ry="10" width="128.0" height="80.0" class="Task" stroke-width="1.5" fill="url(#__Gradient_StandardActivity__)" stroke="rgb(0,0,128)"/>
+                        <g id="MainShape__DxnXQLDgEfCKCv84icLsWg_GrpLabel">
+                            <clipPath id="MainShape__DxnXQLDgEfCKCv84icLsWg_GrpLabel_Clip">
+                                <rect x="774" y="16" width="108" height="80.0"/>
+                            </clipPath>
+                            <text id="Label__DxnXQLDgEfCKCv84icLsWg" clip-path="url(#MainShape__DxnXQLDgEfCKCv84icLsWg_GrpLabel_Clip)" x="828.0" y="84" text-anchor="middle" stroke="rgb(0,0,128)">Call Sub-Process</text>
+                        </g>
+                        <use id="Icon__DxnXQLDgEfCKCv84icLsWg" xlink:href="#Img_SubProcTask" x="812" y="20"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g id="SequenceFlows__vZ0sII_MEfCCSrkQV0fGYA">
+            <g id="_1Ie4E4_MEfCCSrkQV0fGYA" class="SequenceFlowObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                <polyline id="MainShape__1Ie4E4_MEfCCSrkQV0fGYA" stroke-width="1.5" class="SequenceFlow" fill="none" points="940,56 1143.25,56 1143.25,187 1346.5,187" stroke="rgb(0,0,128)"/>
+                <use id="TargetDecoration__1Ie4E4_MEfCCSrkQV0fGYA" xlink:href="#Std_RightArrow" x="1346.5" y="187" fill="rgb(128,128,128)" stroke="rgb(0,0,128)"/>
+            </g>
+            <g id="_6FK0gI_MEfCCSrkQV0fGYA" class="SequenceFlowObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                <polyline id="MainShape__6FK0gI_MEfCCSrkQV0fGYA" stroke-width="1.5" class="SequenceFlow" fill="none" points="88.5,155 117.25,155 117.25,166 146,166" stroke="rgb(0,0,128)"/>
+                <use id="TargetDecoration__6FK0gI_MEfCCSrkQV0fGYA" xlink:href="#Std_RightArrow" x="146" y="166" fill="rgb(128,128,128)" stroke="rgb(0,0,128)"/>
+            </g>
+            <g id="_7fju4Y_MEfCCSrkQV0fGYA" class="SequenceFlowObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                <polyline id="MainShape__7fju4Y_MEfCCSrkQV0fGYA" stroke-width="1.5" class="SequenceFlow" fill="none" points="335,132.5 335,49 428,49" stroke="rgb(0,0,128)"/>
+                <use id="TargetDecoration__7fju4Y_MEfCCSrkQV0fGYA" xlink:href="#Std_RightArrow" x="428" y="49" fill="rgb(128,128,128)" stroke="rgb(0,0,128)"/>
+            </g>
+            <g id="_Q6ffEY_QEfCCSrkQV0fGYA" class="SequenceFlowObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                <polyline id="MainShape__Q6ffEY_QEfCCSrkQV0fGYA" stroke-width="1.5" class="SequenceFlow" fill="none" points="242,166 277.75,166 277.75,155 313.5,155" stroke="rgb(0,0,128)"/>
+                <use id="TargetDecoration__Q6ffEY_QEfCCSrkQV0fGYA" xlink:href="#Std_RightArrow" x="313.5" y="155" fill="rgb(128,128,128)" stroke="rgb(0,0,128)"/>
+            </g>
+            <g id="_VnnVg4_QEfCCSrkQV0fGYA" class="SequenceFlowObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                <polyline id="MainShape__VnnVg4_QEfCCSrkQV0fGYA" stroke-width="1.5" class="SequenceFlow" fill="none" points="335,177.5 335,370 597,370" stroke="rgb(0,0,128)"/>
+                <use id="SourceDecoration__VnnVg4_QEfCCSrkQV0fGYA" xlink:href="#Std_DownSlash" x="335" y="189.5" fill="rgb(128,128,128)" stroke="rgb(0,0,128)"/>
+                <use id="TargetDecoration__VnnVg4_QEfCCSrkQV0fGYA" xlink:href="#Std_RightArrow" x="597" y="370" fill="rgb(128,128,128)" stroke="rgb(0,0,128)"/>
+            </g>
+            <g id="_kFtxwbDVEfCKCv84icLsWg" class="SequenceFlowObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                <polyline id="MainShape__kFtxwbDVEfCKCv84icLsWg" stroke-width="1.5" class="SequenceFlow" fill="none" points="524,49 539,49 539,56 554,56" stroke="rgb(0,0,128)"/>
+                <use id="TargetDecoration__kFtxwbDVEfCKCv84icLsWg" xlink:href="#Std_RightArrow" x="554" y="56" fill="rgb(128,128,128)" stroke="rgb(0,0,128)"/>
+            </g>
+            <g id="_d-SU8rDfEfCKCv84icLsWg" class="SequenceFlowObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                <polyline id="MainShape__d-SU8rDfEfCKCv84icLsWg" stroke-width="1.5" class="SequenceFlow" fill="none" points="650,56 812,56" stroke="rgb(0,0,128)"/>
+                <use id="TargetDecoration__d-SU8rDfEfCKCv84icLsWg" xlink:href="#Std_RightArrow" x="812" y="56" fill="rgb(128,128,128)" stroke="rgb(0,0,128)"/>
+            </g>
+            <g id="_hv_E8LDfEfCKCv84icLsWg" class="SequenceFlowObject DiagramObject" onmouseover="objectMouseOver(evt)" onmouseout="objectMouseOut(evt)" onclick="objectMouseClick(evt)">
+                <polyline id="MainShape__hv_E8LDfEfCKCv84icLsWg" stroke-width="1.5" class="SequenceFlow" fill="none" points="693,370 1019.75,370 1019.75,187 1346.5,187" stroke="rgb(0,0,128)"/>
+                <use id="TargetDecoration__hv_E8LDfEfCKCv84icLsWg" xlink:href="#Std_RightArrow" x="1346.5" y="187" fill="rgb(128,128,128)" stroke="rgb(0,0,128)"/>
+            </g>
+        </g>
+    </g>
+</svg>
