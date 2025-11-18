@@ -9,7 +9,7 @@
 /node_modules/
 /package-lock.json
 /yarn.lock
-/lib/*.js
+/lib/**/*.js
 
 # Environment files
 /.env
