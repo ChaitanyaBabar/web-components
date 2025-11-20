@@ -1,10 +1,6 @@
 import { consume } from "@lit/context";
 import { LitElement, html, unsafeCSS } from "lit";
 import {customElement, property, query, state} from 'lit/decorators.js';
-import { ifDefined } from 'lit/directives/if-defined.js';
-import { unsafeSVG } from 'lit/directives/unsafe-svg.js';
-import { AnnotateService, AnnotateServiceContext } from "../annotate-service";
-import { AnnotateUtilityContext, AnnotationUtility } from "../annotate-utility";
 import { emit } from "../../internal/event/event";
 // @ts-ignore
 import styles from './audit-trail.css?raw';
@@ -23,19 +19,10 @@ import { OverlayInfoImpl } from "../model/overlay.info";
 class AuditTrail extends LitElement {
 
     @property({type: Object}) 
-    selectedWorkItem?: any | null;
+    selectedTask?: any | null;
 
     @property({type: String}) 
     processInstance?: string | null;
-
-    // Set this property (attribute: `svg-file`) to the filename in `assets/` you want to show
-    // Example: <audit-trail svg-file="example.svg"></audit-trail>
-    @property({type: String, attribute: 'svg-file'})
-    svgFile?: string | null = null;
-
-    @state() 
-    private _svgContent: string | null = null;
-
 
     @state()
     private _diagramModel: any = null;
@@ -43,13 +30,7 @@ class AuditTrail extends LitElement {
     @property({state: true, type: Object})
     auditTrailData?: any | null;
 
-    // TODO : Do we really need this service, as we are using AnnotateUtility directly, the AnnotateUilityService 
-    //        current do not run annotation logic depending on any events.
-    @consume({context: AnnotateServiceContext })
-    private _annotateService!: AnnotateService;
 
-    @consume({context: AnnotateUtilityContext })
-    private _annotateUtility!: AnnotationUtility;
 
     @consume({context: AuditTrailServiceContext })
     private _auditTrailService!: AuditTrailService;
@@ -78,46 +59,34 @@ class AuditTrail extends LitElement {
 
     constructor() {
         super();
-        this.svgFile = 'BPMProcessProcess.svg';
 
-
-        this.fetchAuditData();
-        this.loadSVGContent();
-
-         // Register SVG event handlers on window object
+        // Register SVG event handlers on window object
         this.registerSvgHandlers();
+        this.fetchAuditData();
     }
 
-    get svgSrc() {
-        if (!this.svgFile) return null;
-        // Path is relative to the served page. Adjust if your bundler/host serves assets from a different base.
-        return `assets/${this.svgFile}`;
-    }
 
     override render() {
         return html`
             <div>Audit Trail Component Loaded</div>
 
-            <div>Selected Work Item: ${this.selectedWorkItem}</div>
+            <div>Selected Work Item: ${this.selectedTask}</div>
             <div>Process Instance: ${this.processInstance}</div>
 
             ${this.auditTrailData ? html`<div>Audit Trail Data EeventId: ${this.auditTrailData[0].eventId}</div>` : html`<div>Loading Audit Trail Data...</div>` }
 
 
+            CODE CLEAN UP IN PROGRESS !!!
+
             <div id="page-main-menu">
             </div>
             <div id="main-svg-container"></div>
-            <!-- ${this._svgContent ? html`<div id="audit-trail-svg" class="audit-svg">${unsafeSVG(this._svgContent)}</div>` : html`<div>Loading SVG...</div>`} -->
-            
-            
-
-            <!-- ${this.svgSrc ? html`<div id="audit-trail-svg" class="audit-svg"><object type="image/svg+xml" data=${ifDefined(this.svgSrc ?? undefined)} alt=${this.svgFile ?? ''}></object></div>` : html``} -->
         `;
     }
 
 
     fetchAuditData() {
-       fetch('assets/parallel_flow.json').then(response => response.json()).then(data => {
+       fetch('assets/update_sizes.json').then(response => response.json()).then(data => {
              this._diagramModel = data;
              const pd: any = (window as any)['process-diagram'];
              var diagram = pd.createDiagram(this._mainSvgContainer, data,
@@ -166,6 +135,7 @@ class AuditTrail extends LitElement {
                     const overlay = overlayTodos[i];
                     let diagramElement = this._diagram.getDiagramObject(overlay.flowElement);
                     let overLayInfo = new OverlayInfoImpl();
+                    // Add renderRoot for DOM access in overlay callback
                     diagramElement.renderRoot = this.renderRoot;
                     overLayInfo.msg = overlay.auditItem.message;
 
@@ -192,21 +162,9 @@ class AuditTrail extends LitElement {
                     }]);    
                 }
 
-
-
-
-
-                // After data is loaded, trigger annotation
-                this._annotateService.triggerAnnotationEvent(this.auditTrailData);
-
-                // Start annotation parsing on the SVG element
-                const svgElement = this._mainSvgContainer;
-                if (svgElement) {
-                    this._annotateUtility.startAnnotationParsing(svgElement, this.auditTrailData);
-                }
             });
        }, error => {
-           console.error('Error fetching audit trail data:', error);
+           console.error('Error fetching audit process model:', error);
        });
     }
 
@@ -237,17 +195,6 @@ class AuditTrail extends LitElement {
 
 
 
-    loadSVGContent() {
-        if (!this.svgSrc) return;
-        fetch(this.svgSrc)
-            .then(response => response.text())
-            .then(svgText => {
-                this._svgContent = svgText;
-            })
-            .catch(error => {
-                console.error('Error loading SVG:', error);
-            }); 
-    }
     
     
     private registerSvgHandlers(): void {
@@ -275,11 +222,11 @@ class AuditTrail extends LitElement {
         const type = currentProcessingElement.getAttribute('data-type');
 
         if (type === 'EmbeddedSubProcess') {
-            this.handleSubprocessClick(evt);
+            // Handle Embedded Sub-Process click if needed
         } else if (currentProcessingElement?.parentNode?.classList?.contains('click-wrapper')) {
-            this.removeExistingWrapper(currentProcessingElement);
+            // Removed Existing Wrapper
         } else {
-            this.createWrapperForElement(currentProcessingElement, evt);
+            // Add Click Wrapper and Emit Event
             emit(this, 'bpm-work-item-selected', { 
                 detail: { workItem: currentProcessingElement }
             });
@@ -288,67 +235,5 @@ class AuditTrail extends LitElement {
         evt.stopPropagation();
         evt.preventDefault();
     }
-
-    private handleSubprocessClick(evt: any): void {
-        //this.svgFile = 'subprocess-svg-' + Date.now();
-        
-        // Update process instance reference for subprocess
-        const subprocessInstanceRef = 'p:0a20c'; // This should come from the event data
-        this.processInstance = subprocessInstanceRef;
-        this.config.reference = subprocessInstanceRef;
-        
-        // Fetch new data for subprocess
-        this.fetchAuditData();
-        
-        emit(this, 'bpm-subprocess-selected', { 
-           detail: { processInstanceRef: subprocessInstanceRef }
-        });
-    }
-
-    private removeExistingWrapper(currentProcessingElement: any): void {
-        const wrapper = currentProcessingElement.parentNode;
-        const wrapperChildren = wrapper.childNodes;
-        
-        if (wrapperChildren.length > 0) {
-            const firstChild = wrapperChildren[0];
-            wrapper.removeChild(firstChild);
-        }
-
-        const parentOfWrapper = wrapper.parentNode;
-        parentOfWrapper.insertBefore(currentProcessingElement, wrapper.nextSibling);
-        parentOfWrapper.removeChild(wrapper);
-    }
-    
-    private createWrapperForElement(currentProcessingElement: any, evt: any): void {
-        const elementId = currentProcessingElement?.id;
-
-        // Create wrapper g element
-        const wrapper_g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-        wrapper_g.classList.add('click-wrapper');
-        wrapper_g.setAttribute('layout', 'row');
-        wrapper_g.setAttribute('layout-align', 'center center');
-        wrapper_g.setAttribute('flex', '');
-
-        // Insert wrapper and move element
-        const parent = currentProcessingElement.parentNode;
-        parent.insertBefore(wrapper_g, currentProcessingElement);
-        wrapper_g.appendChild(currentProcessingElement);
-
-        // Create highlight rectangle
-        const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-        rect.setAttribute('id', `wrapper-${elementId}`);
-        
-        const dimensions = evt.target.getBBox();
-        rect.setAttribute('x', (dimensions.x - 4).toString());
-        rect.setAttribute('y', (dimensions.y - 4).toString());
-        rect.setAttribute('width', (dimensions.width + 8).toString());
-        rect.setAttribute('height', (dimensions.height + 8).toString());
-        rect.setAttribute('rx', '3');
-        rect.setAttribute('ry', '3');
-        rect.setAttribute('fill', 'transparent');
-        rect.setAttribute('stroke', 'blue');
-        rect.setAttribute('stroke-width', '2');
-
-        wrapper_g.insertBefore(rect, currentProcessingElement);
-    }    
+  
 }

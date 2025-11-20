@@ -1,8 +1,6 @@
 import { LitElement, css, html } from "lit";
 import { customElement } from "lit/decorators.js";
-import { AnnotateService, AnnotateServiceContext, AnnotateServiceImpl } from "../annotate-service";
 import { provide } from "@lit/context";
-import { AnnotateUtilityContext, AnnotationUtility, AnnotationUtilityImpl } from "../annotate-utility";
 import { AuditTrailService, AuditTrailServiceContext, AuditTrailServiceImpl } from "../audit-trail-service";
 
 
@@ -11,14 +9,8 @@ import { AuditTrailService, AuditTrailServiceContext, AuditTrailServiceImpl } fr
 @customElement("audit-trail-viewer")
 class AuditTrailViewer extends LitElement {
 
-    private selectedWorkItem: string | null = null;
+    private selectedTask: string | null = null;
     private processInstance: string | null = null;
-
-    @provide({ context: AnnotateServiceContext })
-    private _annotateService: AnnotateService = new AnnotateServiceImpl();
-
-    @provide({ context: AnnotateUtilityContext })
-    private _annotateUtility: AnnotationUtility = new AnnotationUtilityImpl();
 
 
     @provide({ context: AuditTrailServiceContext })
@@ -32,7 +24,7 @@ class AuditTrailViewer extends LitElement {
 
     constructor() {
         super();
-        this.selectedWorkItem = "_7fju4I_MEfCCSrkQV0fGYA";
+        this.selectedTask = "_7fju4I_MEfCCSrkQV0fGYA";
         this.processInstance = "p:0a20b";
     }
     
@@ -40,7 +32,7 @@ class AuditTrailViewer extends LitElement {
     override render() {
         return html`
             <div>CB Audit Trail Viewer !!!</div>
-            <audit-trail .processInstance=${this.processInstance} .selectedWorkItem=${this.selectedWorkItem}></audit-trail>
+            <audit-trail .processInstance=${this.processInstance} .selectedTask=${this.selectedTask}></audit-trail>
             `;
     }
 
