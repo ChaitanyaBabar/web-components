@@ -7,7 +7,7 @@ import { AuditTrailService, AuditTrailServiceContext, AuditTrailServiceImpl } fr
 
 
 @customElement("audit-trail-viewer")
-class AuditTrailViewer extends LitElement {
+export class AuditTrailViewer extends LitElement {
 
     private selectedTask: string | null = null;
     private processInstance: string | null = null;
@@ -44,5 +44,10 @@ class AuditTrailViewer extends LitElement {
         console.log('Audit Task Selected Event Received: ', event);
     }
  
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "audit-trail-viewer": AuditTrailViewer;}
 }
 

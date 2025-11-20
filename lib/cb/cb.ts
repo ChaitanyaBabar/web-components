@@ -3,7 +3,7 @@ import { customElement } from "lit/decorators.js";
 
 
 @customElement("cb-element")
-class CB extends LitElement {
+export class CB extends LitElement {
 
     static styles = css`
         div {
@@ -19,4 +19,10 @@ class CB extends LitElement {
     
 
 
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "cb-element": CB;
+    }
 }

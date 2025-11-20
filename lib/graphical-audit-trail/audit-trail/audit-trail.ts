@@ -16,7 +16,7 @@ import { OverlayInfoImpl } from "../model/overlay.info";
 
 
 @customElement("audit-trail")
-class AuditTrail extends LitElement {
+export class AuditTrail extends LitElement {
 
     @property({type: Object}) 
     selectedTask?: any | null;
@@ -77,6 +77,8 @@ class AuditTrail extends LitElement {
 
 
             CODE CLEAN UP IN PROGRESS !!!
+
+            <bpme-process-diagram></bpme-process-diagram>
 
             <div id="page-main-menu">
             </div>
@@ -236,4 +238,10 @@ class AuditTrail extends LitElement {
         evt.preventDefault();
     }
   
+}
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "audit-trail": AuditTrail;
+  }
 }
