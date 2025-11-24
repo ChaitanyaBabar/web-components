@@ -6,8 +6,8 @@ import { AuditTrailService, AuditTrailServiceContext, AuditTrailServiceImpl } fr
 
 
 
-@customElement("audit-trail-viewer")
-export class AuditTrailViewer extends LitElement {
+@customElement("bpme-audit-trail-viewer")
+export class BPMEAuditTrailViewer extends LitElement {
 
     private selectedTask: string | null = null;
 
@@ -40,7 +40,7 @@ export class AuditTrailViewer extends LitElement {
         return html`
             <div>CB Audit Trail Viewer !!!</div>
 
-            ${this.processInstance ? html`<audit-trail .processInstance=${this.processInstance} .selectedTask=${this.selectedTask}></audit-trail>` : html`<div>Loading AuditTrail.</div>` }
+            ${this.processInstance ? html`<bpme-audit-trail .processInstance=${this.processInstance} .selectedTask=${this.selectedTask}></bpme-audit-trail>` : html`<div>Loading AuditTrail.</div>` }
             `;
     }
 
@@ -66,6 +66,6 @@ export class AuditTrailViewer extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "audit-trail-viewer": AuditTrailViewer;}
+    "audit-trail-viewer": BPMEAuditTrailViewer;}
 }
 

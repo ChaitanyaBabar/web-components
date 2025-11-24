@@ -2,11 +2,11 @@ import { LitElement, PropertyValues, html, unsafeCSS } from "lit";
 import {customElement, property, query, state} from 'lit/decorators.js';
 import { emit } from "../../internal/event/event";
 // @ts-ignore
-import styles from './audit-trail.css?raw';
+import styles from './bpme-audit-trail.css?raw';
 
 
-@customElement("audit-trail")
-export class AuditTrail extends LitElement {
+@customElement("bpme-audit-trail")
+export class BPMEAuditTrail extends LitElement {
 
     @property({type: Object}) 
     selectedTask?: any | null;
@@ -169,6 +169,6 @@ export class AuditTrail extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    "audit-trail": AuditTrail;
+    "audit-trail": BPMEAuditTrail;
   }
 }
