@@ -1,0 +1,250 @@
+{
+  "$type": "bp:Definitions",
+  "id": "_LjHaILDfEfCKCv84icLsWg",
+  "rootElements": [
+    {
+      "$type": "bp:Process",
+      "id": "_Lj8gkLDfEfCKCv84icLsWg",
+      "validationStatus": "Ok",
+      "flowElements": [
+        {
+          "$type": "bp:SubProcess",
+          "id": "_N-WGcLDfEfCKCv84icLsWg",
+          "name": "Pool",
+          "internalName": "Pool",
+          "subProcessType": "ParallelLaneContainer",
+          "flowElements": [
+            {
+              "$type": "bp:SubProcess",
+              "id": "_N-WtgLDfEfCKCv84icLsWg",
+              "name": "Lane",
+              "internalName": "Lane",
+              "subProcessType": "ParallelLane",
+              "flowElements": [
+                {
+                  "$type": "bp:StartEvent",
+                  "id": "_N-WtgbDfEfCKCv84icLsWg",
+                  "name": "Start Event",
+                  "internalName": "StartEvent",
+                  "outgoing": [
+                    "_O2lWAbDfEfCKCv84icLsWg"
+                  ]
+                },
+                {
+                  "$type": "bp:EndEvent",
+                  "id": "_N-WtgrDfEfCKCv84icLsWg",
+                  "name": "End Event",
+                  "internalName": "EndEvent",
+                  "incoming": [
+                    "_N-Wtg7DfEfCKCv84icLsWg"
+                  ]
+                },
+                {
+                  "$type": "bp:UserTask",
+                  "id": "_O2lWALDfEfCKCv84icLsWg",
+                  "name": "LinkedProcess_Task1",
+                  "internalName": "LinkedProcess_Task1",
+                  "incoming": [
+                    "_O2lWAbDfEfCKCv84icLsWg"
+                  ],
+                  "outgoing": [
+                    "_PY2VkbDfEfCKCv84icLsWg"
+                  ]
+                },
+                {
+                  "$type": "bp:UserTask",
+                  "id": "_PY2VkLDfEfCKCv84icLsWg",
+                  "name": "LinkedProcess_Task2",
+                  "internalName": "LinkedProcess_Task2",
+                  "incoming": [
+                    "_PY2VkbDfEfCKCv84icLsWg"
+                  ],
+                  "outgoing": [
+                    "_N-Wtg7DfEfCKCv84icLsWg"
+                  ]
+                },
+                {
+                  "$type": "bp:SequenceFlow",
+                  "id": "_O2lWAbDfEfCKCv84icLsWg",
+                  "flowMarker": "A",
+                  "sourceRef": "_N-WtgbDfEfCKCv84icLsWg",
+                  "targetRef": "_O2lWALDfEfCKCv84icLsWg"
+                },
+                {
+                  "$type": "bp:SequenceFlow",
+                  "id": "_PY2VkbDfEfCKCv84icLsWg",
+                  "flowMarker": "A",
+                  "sourceRef": "_O2lWALDfEfCKCv84icLsWg",
+                  "targetRef": "_PY2VkLDfEfCKCv84icLsWg"
+                },
+                {
+                  "$type": "bp:SequenceFlow",
+                  "id": "_N-Wtg7DfEfCKCv84icLsWg",
+                  "flowMarker": "A",
+                  "sourceRef": "_PY2VkLDfEfCKCv84icLsWg",
+                  "targetRef": "_N-WtgrDfEfCKCv84icLsWg"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "diagrams": [
+    {
+      "$type": "bpdi:BPDiagram",
+      "plane": {
+        "$type": "bpdi:BPPlane",
+        "planeElement": [
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_N-WGcLDfEfCKCv84icLsWg",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 24,
+              "y": 0,
+              "width": 757,
+              "height": 314
+            }
+          },
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_N-WtgLDfEfCKCv84icLsWg",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 48,
+              "y": 0,
+              "width": 733,
+              "height": 314
+            }
+          },
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_N-WtgbDfEfCKCv84icLsWg",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 79,
+              "y": 155,
+              "width": 27,
+              "height": 27
+            },
+            "label": {
+              "$type": "bpdi:BPLabel",
+              "bounds": {
+                "$type": "dc:Bounds",
+                "x": 65,
+                "y": 185,
+                "width": 55,
+                "height": 20
+              }
+            }
+          },
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_N-WtgrDfEfCKCv84icLsWg",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 616,
+              "y": 155,
+              "width": 30,
+              "height": 30
+            },
+            "label": {
+              "$type": "bpdi:BPLabel",
+              "bounds": {
+                "$type": "dc:Bounds",
+                "x": 602,
+                "y": 185,
+                "width": 55,
+                "height": 20
+              }
+            }
+          },
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_O2lWALDfEfCKCv84icLsWg",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 199,
+              "y": 123,
+              "width": 96,
+              "height": 64
+            }
+          },
+          {
+            "$type": "bpdi:BPShape",
+            "bpElement": "_PY2VkLDfEfCKCv84icLsWg",
+            "bounds": {
+              "$type": "dc:Bounds",
+              "x": 394,
+              "y": 123,
+              "width": 96,
+              "height": 64
+            }
+          },
+          {
+            "$type": "bpdi:BPEdge",
+            "bpElement": "_O2lWAbDfEfCKCv84icLsWg",
+            "waypoint": [
+              {
+                "$type": "dc:Point",
+                "x": 106,
+                "y": 168
+              },
+              {
+                "$type": "dc:Point",
+                "x": 152,
+                "y": 168
+              },
+              {
+                "$type": "dc:Point",
+                "x": 152,
+                "y": 155
+              },
+              {
+                "$type": "dc:Point",
+                "x": 199,
+                "y": 155
+              }
+            ]
+          },
+          {
+            "$type": "bpdi:BPEdge",
+            "bpElement": "_PY2VkbDfEfCKCv84icLsWg",
+            "waypoint": [
+              {
+                "$type": "dc:Point",
+                "x": 295,
+                "y": 155
+              },
+              {
+                "$type": "dc:Point",
+                "x": 394,
+                "y": 155
+              }
+            ]
+          },
+          {
+            "$type": "bpdi:BPEdge",
+            "bpElement": "_N-Wtg7DfEfCKCv84icLsWg",
+            "waypoint": [
+              {
+                "$type": "dc:Point",
+                "x": 490,
+                "y": 155
+              },
+              {
+                "$type": "dc:Point",
+                "x": 616,
+                "y": 155
+              }
+            ]
+          }
+        ],
+        "bpElement": "_Lj8gkLDfEfCKCv84icLsWg"
+      }
+    }
+  ],
+  "formatVersion": 3
+}

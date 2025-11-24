@@ -1,5 +1,5 @@
 import { LitElement, css, html } from "lit";
-import { customElement } from "lit/decorators.js";
+import { customElement, property } from "lit/decorators.js";
 import { provide } from "@lit/context";
 import { AuditTrailService, AuditTrailServiceContext, AuditTrailServiceImpl } from "../audit-trail-service";
 
@@ -10,7 +10,9 @@ import { AuditTrailService, AuditTrailServiceContext, AuditTrailServiceImpl } fr
 export class AuditTrailViewer extends LitElement {
 
     private selectedTask: string | null = null;
-    private processInstance: string | null = null;
+
+    @property({type: String}) 
+    processInstance: string | null = null;
 
 
     @provide({ context: AuditTrailServiceContext })
@@ -27,12 +29,18 @@ export class AuditTrailViewer extends LitElement {
         this.selectedTask = "_7fju4I_MEfCCSrkQV0fGYA";
         this.processInstance = "p:0a20b";
     }
+
+    connectedCallback(): void {
+        super.connectedCallback();
+        this.addEventListeners();
+    }
     
 
     override render() {
         return html`
             <div>CB Audit Trail Viewer !!!</div>
-            <audit-trail .processInstance=${this.processInstance} .selectedTask=${this.selectedTask}></audit-trail>
+
+            ${this.processInstance ? html`<audit-trail .processInstance=${this.processInstance} .selectedTask=${this.selectedTask}></audit-trail>` : html`<div>Loading AuditTrail.</div>` }
             `;
     }
 
@@ -43,6 +51,16 @@ export class AuditTrailViewer extends LitElement {
     onAuditTaskSelected(event: any){
         console.log('Audit Task Selected Event Received: ', event);
     }
+
+
+    addEventListeners(){
+        if(this.shadowRoot){
+            this.shadowRoot.addEventListener('bpme-subprocess-clicked', (event: Event) => {
+                this.processInstance = 'subprocess';
+            });
+        }
+    }
+
  
 }
 
