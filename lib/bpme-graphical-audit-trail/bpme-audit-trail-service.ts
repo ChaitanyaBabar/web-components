@@ -1,10 +1,10 @@
 import {createContext} from '@lit/context';
 
-export const AuditTrailServiceContext = createContext<AuditTrailService>('audit-trail-service-context');
+export const BPMEAuditTrailServiceContext = createContext<BPMEAuditTrailService>('bpme-audit-trail-service-context');
 
 
 
-export interface AuditTrailService {
+export interface BPMEAuditTrailService {
     getFlowElements(process: any): any[];
     actualTodos(flowElements: any[], auditTrailData: any[]): any[];
 }
@@ -14,7 +14,7 @@ export interface AuditTrailService {
  * @since 1.0.0
  * @status stable
  */
-export class AuditTrailServiceImpl implements AuditTrailService {
+export class BPMEAuditTrailServiceImpl implements BPMEAuditTrailService {
     
     getFlowElements(process: any): any[] {
         var flowElements: any[] = [];

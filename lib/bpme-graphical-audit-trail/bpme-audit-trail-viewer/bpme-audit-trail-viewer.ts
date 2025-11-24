@@ -1,7 +1,7 @@
 import { LitElement, css, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { provide } from "@lit/context";
-import { AuditTrailService, AuditTrailServiceContext, AuditTrailServiceImpl } from "../audit-trail-service";
+import { BPMEAuditTrailService, BPMEAuditTrailServiceContext, BPMEAuditTrailServiceImpl } from "../bpme-audit-trail-service";
 
 
 
@@ -15,8 +15,8 @@ export class BPMEAuditTrailViewer extends LitElement {
     processInstance: string | null = null;
 
 
-    @provide({ context: AuditTrailServiceContext })
-    private _auditTrailService: AuditTrailService = new AuditTrailServiceImpl();
+    @provide({ context: BPMEAuditTrailServiceContext })
+    private _auditTrailService: BPMEAuditTrailService = new BPMEAuditTrailServiceImpl();
 
     static styles = css`
         div {

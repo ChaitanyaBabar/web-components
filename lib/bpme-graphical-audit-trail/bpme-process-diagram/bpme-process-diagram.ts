@@ -9,7 +9,7 @@ import diagramCss from '../../../styles/diagram-js.css?raw';
 import processDiagramCss from '../../../styles/process-diagram-js.css?raw';
 // @ts-ignore
 import materialIconsCss from '../../../styles/iconfont/material-icons.css?raw';
-import { AuditTrailService, AuditTrailServiceContext } from "../audit-trail-service";
+import { BPMEAuditTrailService, BPMEAuditTrailServiceContext } from "../audit-trail-service";
 import { consume } from "@lit/context";
 import { OverlayInfoImpl } from "../model/overlay.info";
 
@@ -29,8 +29,8 @@ export class BPMEProcessDiagram extends LitElement {
     private _mainSvgContainer!: HTMLElement;
 
     
-    @consume({context: AuditTrailServiceContext })
-    private _auditTrailService!: AuditTrailService;
+    @consume({context: BPMEAuditTrailServiceContext })
+    private _auditTrailService!: BPMEAuditTrailService;
 
 
     private _diagram: any | null = null;
