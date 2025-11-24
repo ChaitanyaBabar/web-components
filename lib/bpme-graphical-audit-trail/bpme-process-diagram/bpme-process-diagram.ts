@@ -9,7 +9,7 @@ import diagramCss from '../../../styles/diagram-js.css?raw';
 import processDiagramCss from '../../../styles/process-diagram-js.css?raw';
 // @ts-ignore
 import materialIconsCss from '../../../styles/iconfont/material-icons.css?raw';
-import { BPMEAuditTrailService, BPMEAuditTrailServiceContext } from "../audit-trail-service";
+import { BPMEAuditTrailService, BPMEAuditTrailServiceContext } from "../bpme-audit-trail-service";
 import { consume } from "@lit/context";
 import { OverlayInfoImpl } from "../model/overlay.info";
 
