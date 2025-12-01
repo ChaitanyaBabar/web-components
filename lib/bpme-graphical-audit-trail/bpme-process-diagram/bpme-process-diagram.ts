@@ -305,6 +305,21 @@ export class BPMEProcessDiagram extends LitElement {
                     annotationOverlays.addAnnotation(diagramElement, [overLayInfo]);
                 }]);    
             }
+
+
+                // After creating diagram and fetching audit data
+                this._diagram.invoke(['PathHighlighter', function (PathHighlighter: any) {
+                    PathHighlighter.highlightCompletedPath({
+                        completedTasks: ['_1Ie4EY_MEfCCSrkQV0fGYA', '_6FKNcI_MEfCCSrkQV0fGYA', '_Q6ffEI_QEfCCSrkQV0fGYA', '_7fju4I_MEfCCSrkQV0fGYA', '_kFtxwLDVEfCKCv84icLsWg'],
+                        traversedFlows: [
+                            '_6FK0gI_MEfCCSrkQV0fGYA',      // Start Event → User Task
+                            '_Q6ffEY_QEfCCSrkQV0fGYA',      // User Task → Decide Gateway
+                            '_7fju4Y_MEfCCSrkQV0fGYA',      // Decide → Script Task (True condition path)
+                            '_kFtxwbDVEfCKCv84icLsWg',     // Script Task → Condition Matched UserTask
+                            '_d-SU8rDfEfCKCv84icLsWg',     // Condition Matched UserTask → Call Sub-Process
+                        ]
+                    });
+                }]);                
         }
     }
 

@@ -43,13 +43,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var min_dom_lib_remove__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! min-dom/lib/remove */ "./node_modules/min-dom/lib/remove.js");
 /* harmony import */ var min_dom_lib_remove__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(min_dom_lib_remove__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _bp_model__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./bp-model */ "./src/bp-model/index.js");
-/* harmony import */ var diagram_js__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! diagram-js */ "./node_modules/diagram-js/lib/Diagram.js");
+/* harmony import */ var diagram_js__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! diagram-js */ "./node_modules/diagram-js/lib/Diagram.js");
 /* harmony import */ var _features_selection__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./features/selection */ "./src/features/selection/index.js");
 /* harmony import */ var _draw__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./draw */ "./src/draw/index.js");
-/* harmony import */ var diagram_js_lib_navigation_zoomscroll__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! diagram-js/lib/navigation/zoomscroll */ "./node_modules/diagram-js/lib/navigation/zoomscroll/index.js");
-/* harmony import */ var diagram_js_lib_navigation_movecanvas__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! diagram-js/lib/navigation/movecanvas */ "./node_modules/diagram-js/lib/navigation/movecanvas/index.js");
-/* harmony import */ var diagram_js_lib_features_space_tool__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! diagram-js/lib/features/space-tool */ "./node_modules/diagram-js/lib/features/space-tool/index.js");
-/* harmony import */ var diagram_js_lib_features_lasso_tool__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! diagram-js/lib/features/lasso-tool */ "./node_modules/diagram-js/lib/features/lasso-tool/index.js");
+/* harmony import */ var diagram_js_lib_navigation_zoomscroll__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! diagram-js/lib/navigation/zoomscroll */ "./node_modules/diagram-js/lib/navigation/zoomscroll/index.js");
+/* harmony import */ var diagram_js_lib_navigation_movecanvas__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! diagram-js/lib/navigation/movecanvas */ "./node_modules/diagram-js/lib/navigation/movecanvas/index.js");
+/* harmony import */ var diagram_js_lib_features_space_tool__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! diagram-js/lib/features/space-tool */ "./node_modules/diagram-js/lib/features/space-tool/index.js");
+/* harmony import */ var diagram_js_lib_features_lasso_tool__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! diagram-js/lib/features/lasso-tool */ "./node_modules/diagram-js/lib/features/lasso-tool/index.js");
 /* harmony import */ var _features_command__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./features/command */ "./src/features/command/index.js");
 /* harmony import */ var _features_modeling__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./features/modeling */ "./src/features/modeling/index.js");
 /* harmony import */ var _features_rules__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./features/rules */ "./src/features/rules/index.js");
@@ -57,15 +57,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _features_keyboard__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./features/keyboard */ "./src/features/keyboard/index.js");
 /* harmony import */ var _features_editor_actions__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./features/editor-actions */ "./src/features/editor-actions/index.js");
 /* harmony import */ var _features_annotations__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./features/annotations */ "./src/features/annotations/index.js");
-/* harmony import */ var _features_auto_resize__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./features/auto-resize */ "./src/features/auto-resize/index.js");
-/* harmony import */ var _features_resize__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./features/resize */ "./src/features/resize/index.js");
-/* harmony import */ var diagram_js_lib_features_move__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! diagram-js/lib/features/move */ "./node_modules/diagram-js/lib/features/move/index.js");
-/* harmony import */ var diagram_js_lib_features_bendpoints__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! diagram-js/lib/features/bendpoints */ "./node_modules/diagram-js/lib/features/bendpoints/index.js");
-/* harmony import */ var _features_snapping__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./features/snapping */ "./src/features/snapping/index.js");
-/* harmony import */ var _features_palette__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./features/palette */ "./src/features/palette/index.js");
-/* harmony import */ var _features_ordering__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./features/ordering */ "./src/features/ordering/index.js");
-/* harmony import */ var diagram_js_lib_features_connect__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! diagram-js/lib/features/connect */ "./node_modules/diagram-js/lib/features/connect/index.js");
-/* harmony import */ var diagram_js_lib_features_connection_preview__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! diagram-js/lib/features/connection-preview */ "./node_modules/diagram-js/lib/features/connection-preview/index.js");
+/* harmony import */ var _features_pathhighlighter__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./features/pathhighlighter */ "./src/features/pathhighlighter/index.js");
+/* harmony import */ var _features_auto_resize__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./features/auto-resize */ "./src/features/auto-resize/index.js");
+/* harmony import */ var _features_resize__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./features/resize */ "./src/features/resize/index.js");
+/* harmony import */ var diagram_js_lib_features_move__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! diagram-js/lib/features/move */ "./node_modules/diagram-js/lib/features/move/index.js");
+/* harmony import */ var diagram_js_lib_features_bendpoints__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! diagram-js/lib/features/bendpoints */ "./node_modules/diagram-js/lib/features/bendpoints/index.js");
+/* harmony import */ var _features_snapping__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./features/snapping */ "./src/features/snapping/index.js");
+/* harmony import */ var _features_palette__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./features/palette */ "./src/features/palette/index.js");
+/* harmony import */ var _features_ordering__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./features/ordering */ "./src/features/ordering/index.js");
+/* harmony import */ var diagram_js_lib_features_connect__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! diagram-js/lib/features/connect */ "./node_modules/diagram-js/lib/features/connect/index.js");
+/* harmony import */ var diagram_js_lib_features_connection_preview__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! diagram-js/lib/features/connection-preview */ "./node_modules/diagram-js/lib/features/connection-preview/index.js");
 /**
  * Copyright (c) TIBCO Software Inc 2004 - 2016. All rights reserved.
  */
@@ -84,6 +85,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //DiagramLoader = require('./features/modeling/DiagramLoader');
+
 
 
 
@@ -273,7 +275,7 @@ DtDiagram.prototype._bootstrapDiagram = function (options) {
       bindTo: document
     }
   });
-  return new diagram_js__WEBPACK_IMPORTED_MODULE_25__["default"](options);
+  return new diagram_js__WEBPACK_IMPORTED_MODULE_26__["default"](options);
 };
 
 /**
@@ -419,9 +421,9 @@ DtDiagram.prototype.getDiagramObject = function (semanticModelElement) {
 
 // modules the DtDiagram is composed of
 DtDiagram.prototype.getModules = function () {
-  var result = [_features_selection__WEBPACK_IMPORTED_MODULE_11__["default"], _draw__WEBPACK_IMPORTED_MODULE_12__["default"], diagram_js_lib_navigation_zoomscroll__WEBPACK_IMPORTED_MODULE_26__["default"], diagram_js_lib_navigation_movecanvas__WEBPACK_IMPORTED_MODULE_27__["default"], diagram_js_lib_features_space_tool__WEBPACK_IMPORTED_MODULE_28__["default"], diagram_js_lib_features_lasso_tool__WEBPACK_IMPORTED_MODULE_29__["default"], _features_command__WEBPACK_IMPORTED_MODULE_13__["default"], _features_modeling__WEBPACK_IMPORTED_MODULE_14__["default"], _features_rules__WEBPACK_IMPORTED_MODULE_15__["default"], _features_context_pad__WEBPACK_IMPORTED_MODULE_16__["default"], _features_keyboard__WEBPACK_IMPORTED_MODULE_17__["default"], _features_editor_actions__WEBPACK_IMPORTED_MODULE_18__["default"], _features_annotations__WEBPACK_IMPORTED_MODULE_19__["default"], diagram_js_lib_features_connect__WEBPACK_IMPORTED_MODULE_30__["default"], diagram_js_lib_features_connection_preview__WEBPACK_IMPORTED_MODULE_31__["default"]];
+  var result = [_features_selection__WEBPACK_IMPORTED_MODULE_11__["default"], _draw__WEBPACK_IMPORTED_MODULE_12__["default"], diagram_js_lib_navigation_zoomscroll__WEBPACK_IMPORTED_MODULE_27__["default"], diagram_js_lib_navigation_movecanvas__WEBPACK_IMPORTED_MODULE_28__["default"], diagram_js_lib_features_space_tool__WEBPACK_IMPORTED_MODULE_29__["default"], diagram_js_lib_features_lasso_tool__WEBPACK_IMPORTED_MODULE_30__["default"], _features_command__WEBPACK_IMPORTED_MODULE_13__["default"], _features_modeling__WEBPACK_IMPORTED_MODULE_14__["default"], _features_rules__WEBPACK_IMPORTED_MODULE_15__["default"], _features_context_pad__WEBPACK_IMPORTED_MODULE_16__["default"], _features_keyboard__WEBPACK_IMPORTED_MODULE_17__["default"], _features_editor_actions__WEBPACK_IMPORTED_MODULE_18__["default"], _features_annotations__WEBPACK_IMPORTED_MODULE_19__["default"], _features_pathhighlighter__WEBPACK_IMPORTED_MODULE_20__["default"], diagram_js_lib_features_connect__WEBPACK_IMPORTED_MODULE_31__["default"], diagram_js_lib_features_connection_preview__WEBPACK_IMPORTED_MODULE_32__["default"]];
   if (!this.readOnly) {
-    result.push(diagram_js_lib_features_move__WEBPACK_IMPORTED_MODULE_32__["default"], diagram_js_lib_features_bendpoints__WEBPACK_IMPORTED_MODULE_33__["default"], _features_snapping__WEBPACK_IMPORTED_MODULE_22__["default"], _features_palette__WEBPACK_IMPORTED_MODULE_23__["default"], _features_ordering__WEBPACK_IMPORTED_MODULE_24__["default"], _features_resize__WEBPACK_IMPORTED_MODULE_21__["default"], _features_auto_resize__WEBPACK_IMPORTED_MODULE_20__["default"]);
+    result.push(diagram_js_lib_features_move__WEBPACK_IMPORTED_MODULE_33__["default"], diagram_js_lib_features_bendpoints__WEBPACK_IMPORTED_MODULE_34__["default"], _features_snapping__WEBPACK_IMPORTED_MODULE_23__["default"], _features_palette__WEBPACK_IMPORTED_MODULE_24__["default"], _features_ordering__WEBPACK_IMPORTED_MODULE_25__["default"], _features_resize__WEBPACK_IMPORTED_MODULE_22__["default"], _features_auto_resize__WEBPACK_IMPORTED_MODULE_21__["default"]);
   }
   return result;
 };
@@ -9337,6 +9339,83 @@ __webpack_require__.r(__webpack_exports__);
   __depends__: [diagram_js_lib_features_palette__WEBPACK_IMPORTED_MODULE_2__["default"], diagram_js_lib_features_create__WEBPACK_IMPORTED_MODULE_3__["default"], diagram_js_lib_features_space_tool__WEBPACK_IMPORTED_MODULE_4__["default"], diagram_js_lib_features_lasso_tool__WEBPACK_IMPORTED_MODULE_5__["default"], _modeling_Modeling__WEBPACK_IMPORTED_MODULE_1__["default"]],
   __init__: ['paletteProvider'],
   paletteProvider: ['type', _PaletteProvider__WEBPACK_IMPORTED_MODULE_0__["default"]]
+});
+
+/***/ }),
+
+/***/ "./src/features/pathhighlighter/PathHighlighter.js":
+/*!*********************************************************!*\
+  !*** ./src/features/pathhighlighter/PathHighlighter.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+
+
+function PathHighlighter(eventBus, canvas, elementRegistry) {
+  this._eventBus = eventBus;
+  this._canvas = canvas;
+  this._elementRegistry = elementRegistry;
+}
+PathHighlighter.$inject = ['eventBus', 'canvas', 'elementRegistry'];
+PathHighlighter.prototype.highlightCompletedPath = function (auditData) {
+  var elementRegistry = this._elementRegistry;
+  var canvas = this._canvas;
+
+  // Clear previous highlights
+  this.clearHighlights();
+
+  // Highlight completed tasks
+  auditData.completedTasks.forEach(function (taskId) {
+    var element = elementRegistry.get(taskId);
+    if (element) {
+      canvas.addMarker(element, 'completed-task');
+    }
+  });
+
+  // Highlight traversed flows
+  auditData.traversedFlows.forEach(function (flowId) {
+    var element = elementRegistry.get(flowId);
+    if (element) {
+      canvas.addMarker(element, 'traversed-flow');
+    }
+  });
+};
+PathHighlighter.prototype.clearHighlights = function () {
+  var elements = this._elementRegistry.getAll();
+  var canvas = this._canvas;
+  elements.forEach(function (element) {
+    canvas.removeMarker(element, 'completed-task');
+    canvas.removeMarker(element, 'traversed-flow');
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PathHighlighter);
+
+/***/ }),
+
+/***/ "./src/features/pathhighlighter/index.js":
+/*!***********************************************!*\
+  !*** ./src/features/pathhighlighter/index.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var diagram_js_lib_features_overlays__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! diagram-js/lib/features/overlays */ "./node_modules/diagram-js/lib/features/overlays/index.js");
+/* harmony import */ var _PathHighlighter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PathHighlighter */ "./src/features/pathhighlighter/PathHighlighter.js");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  __depends__: [diagram_js_lib_features_overlays__WEBPACK_IMPORTED_MODULE_1__["default"]],
+  __init__: ['PathHighlighter'],
+  PathHighlighter: ['type', _PathHighlighter__WEBPACK_IMPORTED_MODULE_0__["default"]]
 });
 
 /***/ }),

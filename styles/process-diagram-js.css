@@ -157,3 +157,51 @@ CBPM-16944 : Adding the Hand Cursor Pointer on Process Diagram Elements
 .dt-hand-pointer {
     cursor: pointer;
 }
+
+
+/* Completed tasks - green background */
+.completed-task .djs-visual > rect,
+.completed-task .djs-visual > circle,
+.completed-task .djs-visual > polygon,
+.completed-task .djs-visual > path {
+    fill: #d4f4dd; /* Light green background */
+    stroke: #52B415; /* Green border */
+    stroke-width: 2px;
+}
+
+.traversed-flow  .process-marker-sequenceflow-end {
+    stroke-width: 2px;
+    stroke: #52B415;
+    fill: #d4f4dd;
+}
+
+
+/* Traversed flows - animated green path */
+.traversed-flow .djs-visual > path {
+    stroke: #52B415;
+    stroke-width: 2px;
+    stroke-dasharray: 5, 3;
+    animation: flow-dash 1s linear infinite;
+}
+
+
+@keyframes flow-dash {
+    to { stroke-dashoffset: -8; }
+}
+
+/* Current/active task - pulsing */
+.active-task .djs-visual > rect,
+.active-task .djs-visual > circle {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        stroke: #FFA500; 
+        stroke-width: 2px;
+    }
+    50% { 
+        stroke: #FF6600; 
+        stroke-width: 4px;
+    }
+}

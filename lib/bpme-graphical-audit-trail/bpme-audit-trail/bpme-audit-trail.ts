@@ -59,7 +59,12 @@ export class BPMEAuditTrail extends LitElement {
 
             CODE CLEAN UP IN PROGRESS !!! bpme-process-diagarm-component !!!
 
-            <bpme-process-diagram .diagramModel=${this._diagramModel} .auditTrailData=${this.auditTrailData} @bpm-diagram-selection-changed=${this._onDiagramSelectionChanged} @bpm-diagram-ready=${this._onBpmDiagramReady}></bpme-process-diagram>
+            <bpme-process-diagram 
+                .diagramModel=${this._diagramModel} 
+                .auditTrailData=${this.auditTrailData}
+                @bpm-diagram-selection-changed=${this._onDiagramSelectionChanged} 
+                @bpm-diagram-ready=${this._onBpmDiagramReady}>
+            </bpme-process-diagram>
         `;
     }
 
@@ -154,7 +159,7 @@ export class BPMEAuditTrail extends LitElement {
 
         if(_changedProperties.has('processInstance') && this.processInstance) {
             if(this.processInstance === 'p:0a20b'){
-                this.processInstanceDiagramModelUrl = 'assets/parallel_flow.json';
+                this.processInstanceDiagramModelUrl = 'assets/update_sizes.json';
             }
             if(this.processInstance === 'subprocess'){
                 this.processInstanceDiagramModelUrl = 'assets/subprocess.json';
